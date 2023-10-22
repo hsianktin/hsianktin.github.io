@@ -18,22 +18,73 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Stochastic Biophysics Research by Xiangting Li
+email: xiangting.li@ucla.edu
+description: >-
+  Xiangting Li delves into the stochastic dynamics inherent in biological systems, focusing particularly on DNA-protein interactions across multiple scales. By amalgamating statistical physics, biomathematics, and computational methodologies, Li aims to decode the complex molecular interactions within cellular environments. Explore the intricate dance of molecules through the lens of stochastic processes, and venture into the realms of biophysics and genomic maintenance.
+  #baseurl: "/research" # the subpath of your site, e.g. /blog
+url: "http://hsianktin.github.io" # 
+# twitter_username: XiangtingLi_PhD
+github_username:  hsianktin
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+theme: jekyll-bear-theme
 
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
+markdown: kramdown
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+# sass:
+#   sass_dir: css
+#   style:    compressed
+
+collections:
+  my_tags:
+    output: true
+    permalink: /tagged/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: tagged
+
+# baseurl: ""
+permalink: /blog/:slug
+timezone: America/Los_Angeles
+future: false
+
+exclude:
+- README.md
+- LICENSE.md
+
+exclude: [vendor]
+
+Blog: /blog
+
+# Add general links to site pages here
+links:
+  Publications: /publications
+  Resume: /assets/resume.pdf
+  
+
+# Add links for more focus here
+#special_links:
+#  "Search": https://duckduckgo.com
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

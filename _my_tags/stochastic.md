@@ -1,0 +1,4 @@
+---
+slug: stochastic
+name: Stochastic
+---

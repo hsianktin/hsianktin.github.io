@@ -15,3 +15,8 @@ title: Publications
 
 
 \* Denotes co-first authorship
+
+### Talks and Presentations
+- ICSB 2023 (Dyn. 15), Population overcompensation, transients, and oscillations in age-structured Lotka-Volterra models, Hartford, Connecticut, October 10, 2023.
+- APS March Meeting 2023 (D08.00003), Stochastic dynamics and ribosome-RNAP interactions in Transcription-Translation Coupling, Las Vegas, Nevada, March 06, 2023.
+

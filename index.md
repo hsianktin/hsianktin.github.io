@@ -6,13 +6,36 @@ title: Hello
 
 ## Welcome
 
-Greetings! I'm Xiangting Li, a Ph.D. candidate in Computational Medicine at UCLA advised by Prof. [Tom Chou](https://www.math.ucla.edu/~tchou/index.html). My research orbits around the stochastic processes inherent in biological systems, with a spotlight on DNA-protein interactions across multiple scales. 
+Hello! My name is Xiangting Li and I am currently pursuing my Ph.D. in
+biomathematics at UCLA, advised by Prof. [Tom
+Chou](https://www.math.ucla.edu/~tchou/index.html). My research
+focuses on understanding the stochastic processes that occur in
+biological systems, particularly diving into how DNA and proteins
+interact across different scales.
 
 ### Research Interests
 
-I am deeply invested in unraveling the stochastic processes inherent in biological systems, particularly focusing on DNA-protein interactions across multiple scales. My research encompasses a multidisciplinary approach, blending statistical physics, biomathematics, and computational methodologies to decode the complex dynamics governing molecular interactions in cellular environments.
+My interest lies in dissecting the stochastic processes present in
+biological systems, with a special emphasis on DNA-protein
+interactions spanning multiple scales. My approach is a fusion of
+statistical physics, mathematics, and computational techniques, all
+aimed at elucidating the deterministic and stochastic dynamics that dictate molecular
+interactions from a semi-analytical perspective.
 
-My work at UCLA delves into the stochastic dynamics of DNA-protein interactions, aiming to bridge the understanding between microscopic molecular interactions and macroscopic biological phenomena. Through this lens, I explore various facets of molecular biology, including nucleosome disassembly, transcription-translation coupling, and the mechanisms underlying viral evolution.
+At UCLA, my work is focused on characterizing the stochastic dynamics
+of DNA-protein interactions. The goal is to create a link between the
+microscopic interactions occurring at the molecular level and the
+macroscopic phenomena observed in biology. Through this investigative
+framework, I venture into various domains of molecular biology, such
+as nucleosome disassembly, the coupled processes of transcription and
+translation, and understanding the driving forces behind viral
+evolution.
+
+I am also interested in the development of computational tools to aid
+in the analysis of biological data, with a particular flavor on
+inferring first principles from experimental data using a top-down
+approach.
+
 
 ### Recent Publications
 
@@ -23,7 +46,9 @@ My work at UCLA delves into the stochastic dynamics of DNA-protein interactions,
 
 \* Denotes co-first authorship
 
+### Recent Talks
+- ICSB 2023 (Dyn. 15), Population overcompensation, transients, and oscillations in age-structured Lotka-Volterra models, Hartford, Connecticut, October 10, 2023.
+
 ### Contact
 
 - **Email**: xiangting.li＠ucla.edu
-<!-- - **Phone**: +1 213-469-8476 -->

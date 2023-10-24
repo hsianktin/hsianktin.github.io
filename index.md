@@ -25,11 +25,10 @@ interactions from a semi-analytical perspective.
 At UCLA, my work is focused on characterizing the stochastic dynamics
 of DNA-protein interactions. The goal is to create a link between the
 microscopic interactions occurring at the molecular level and the
-macroscopic phenomena observed in biology. Through this investigative
-framework, I venture into various domains of molecular biology, such
-as nucleosome disassembly, the coupled processes of transcription and
-translation, and understanding the driving forces behind viral
-evolution.
+macroscopic phenomena observed in biology. In pursuit of this goal, I have
+explored various models of molecular biology, such as nucleosome
+disassembly, the coupled processes of transcription and translation,
+and understanding the driving forces behind viral evolution.
 
 I am also interested in the development of computational tools to aid
 in the analysis of biological data, with a particular flavor on

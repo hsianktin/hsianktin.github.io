@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: "Kolmogorov backward equation"
 subtitle: "Green function and Fokker-Planck equation"
 date: 2023-10-16 21:51:21 +0530

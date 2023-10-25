@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title:  "A note on Langevin Equations and Stochastic Differential Equations"
 date:   2023-10-15 21:21:21 +0530
 tags: [stochastic]

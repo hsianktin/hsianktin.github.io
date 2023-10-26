@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First passage time"
+title: "PHYS243M First passage time"
 date: 2023-10-24 21:51:21 +0530
 tags: [stochastic]
 ---
@@ -64,7 +64,7 @@ $$
 $$
 Here, the subscripts $(a_0)$ and $(a)$ denote the variables the operator acts on.
 
-See the note for the [Kolmogorov backward equation](/blog/Kolmogorov-backward-eq.html) for a proof on this relation.
+See the note for the [Kolmogorov backward equation](/blog/kolmogorov-backward-eq.html) for a proof on this relation.
 
 Thus
 

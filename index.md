@@ -13,7 +13,11 @@ focuses on understanding the stochastic processes that occur in
 biological systems, particularly diving into how DNA and proteins
 interact across different scales.
 
-### Research Interests
+I also develop tools to facilitate research itself, such as [citation
+crawler](https://github.com/hsianktin/paper_network_builder), a [tool]({{ site.baseurl }}/blog/citation-crawler.html) 
+to build [interactive](assets/citation_crawler.html) network of papers based on citation information.
+
+### General Interests
 
 My interest lies in dissecting the stochastic processes present in
 biological systems, with a special emphasis on DNA-protein
@@ -28,12 +32,15 @@ in-depth exposure to mathematics (analysis, geometry, topology,
 dynamical systems, and probability), physics (statistical mechanics),
 physical chemistry, and biology (molecular, developmental, and
 evolutionary biology). Beyond the training in the classroom, I managed
-to appreciate different research fields from perspectives of a mathematician, a physicist, and a biologist. Even for the same 
-problem of Brownian motion and Langevin equation, the physical 
-approach and the mathematical approach are quite different in the 
-formalism, see my blog post [A note on Langevin Equations and Stochastic Differential Equations](/blog/a-note-on-lange.html) for more details.
+to appreciate different research fields from perspectives of a
+mathematician, a physicist, and a biologist. Even for the same problem
+of Brownian motion and Langevin equation, the physical approach and
+the mathematical approach are quite different in the formalism, see my
+blog post [A note on Langevin Equations and Stochastic Differential
+Equations](/blog/a-note-on-lange.html) for more details.
 
-During my undergraduate years, I worked with Prof. [Zhi Qi(齐志)](https://cqb.pku.edu.cn/qizhi/) on the single-molecule biophysics
+During my undergraduate years, I worked with Prof. [Zhi Qi (齐
+志)](https://cqb.pku.edu.cn/qizhi/) on the single-molecule biophysics
 topics. I worked as both a theorist and an experimentalist, and
 developed a strong interest in the stochastic processes that occur in
 biological systems. 

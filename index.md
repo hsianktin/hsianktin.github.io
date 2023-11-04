@@ -19,14 +19,30 @@ My interest lies in dissecting the stochastic processes present in
 biological systems, with a special emphasis on DNA-protein
 interactions spanning multiple scales. My approach is a fusion of
 statistical physics, mathematics, and computational techniques, all
-aimed at elucidating the deterministic and stochastic dynamics that dictate molecular
-interactions from a semi-analytical perspective.
+aimed at elucidating the deterministic and stochastic dynamics that
+dictate molecular interactions from a semi-analytical perspective.
+
+I received my B.S. in the Integrated Science Program at Peking
+University. The program provided me with a broad and relatively
+in-depth exposure to mathematics (analysis, geometry, topology,
+dynamical systems, and probability), physics (statistical mechanics),
+physical chemistry, and biology (molecular, developmental, and
+evolutionary biology). Beyond the training in the classroom, I managed
+to appreciate different research fields from perspectives of a mathematician, a physicist, and a biologist. Even for the same 
+problem of Brownian motion and Langevin equation, the physical 
+approach and the mathematical approach are quite different in the 
+formalism, see my blog post [A note on Langevin Equations and Stochastic Differential Equations](/blog/a-note-on-lange.html) for more details.
+
+During my undergraduate years, I worked with Prof. [Zhi Qi(齐志)](https://cqb.pku.edu.cn/qizhi/) on the single-molecule biophysics
+topics. I worked as both a theorist and an experimentalist, and
+developed a strong interest in the stochastic processes that occur in
+biological systems. 
 
 At UCLA, my work is focused on characterizing the stochastic dynamics
 of DNA-protein interactions. The goal is to create a link between the
 microscopic interactions occurring at the molecular level and the
-macroscopic phenomena observed in biology. In pursuit of this goal, I have
-explored various models of molecular biology, such as nucleosome
+macroscopic phenomena observed in biology. In pursuit of this goal, I
+have explored various models of molecular biology, such as nucleosome
 disassembly, the coupled processes of transcription and translation,
 and understanding the driving forces behind viral evolution.
 

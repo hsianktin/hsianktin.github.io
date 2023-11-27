@@ -61,7 +61,7 @@ approach.
 
 ### Recent Publications
 
-- **Li, X.**, Chou, T. (2023). Stochastic nucleosome disassembly mediated by remodelers and histone fragmentation, arXiv preprint [arXiv:2309.02736](https://arxiv.org/abs/2309.02736).
+- **Li, X.**, Chou, T. (2023). Stochastic nucleosome disassembly mediated by remodelers and histone fragmentation,  _Journal of Chemical Physics_, (2023). [DOI:10.1063/5.0165136](https://doi.org/10.1063/5.0165136).
 - **Li, X.**, Habibipour, S., Chou, T., Yang, O. O. (2023). The role of APOBEC3-induced mutations in the differential evolution of monkeypox virus, _Virus Evolution_, [doi:10.1093/ve/vead058](https://doi.org/10.1093/ve/vead058).
 - Ding, J.\*, **Li, X.**\*, Shen, J., Zhao, Y., Zhong S., Lai, L., Niu H., Qi, Z. (2023). ssDNA accessibility of Rad51 is regulated by orchestrating multiple RPA dynamics, _Nature Communications_, [doi:10.1038/s41467-023-39579-y](https://doi.org/10.1038/s41467-023-39579-y).
 - **Li, X.**, Chou, T. (2023). Stochastic dynamics and ribosome-RNAP interactions in transcription-translation coupling, _Biophysical Journal_, [doi:10.1016/j.bpj.2022.09.041](https://doi.org/10.1016/j.bpj.2022.09.041).

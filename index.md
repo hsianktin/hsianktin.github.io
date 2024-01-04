@@ -69,7 +69,8 @@ approach.
 \* Denotes co-first authorship
 
 ### Recent Talks
-- Soft Condensed Matter Seminar, Buffer structure and robust perfect adaptation, UCLA, Los Angeles, California, November 16, 2021.
+- Joint Mathematics Meetings 2024, The role of APOBEC3-induced mutations in the differential evolution of monkeypox virus, San Francisco, California, January 3, 2022.
+- Soft Condensed Matter Seminar, Buffer structure and robust perfect adaptation, UCLA, Los Angeles, California, November 16, 2023.
 - ICSB 2023 (Dyn. 15), Population overcompensation, transients, and oscillations in age-structured Lotka-Volterra models, Hartford, Connecticut, October 10, 2023.
 
 ### Contact

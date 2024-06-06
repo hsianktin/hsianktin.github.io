@@ -13,6 +13,35 @@ focuses on understanding the stochastic processes that occur in
 biological systems, particularly diving into how DNA and proteins
 interact across different scales.
 
+A recent interest of mine, inspired by the work of Anton Zilman, is to
+understand and evaluating nonequilibrium processes by its functions. In our
+[paper](https://arxiv.org/abs/2402.04547) on the stochastic kinetic proofreading
+(KPR) processes, we introduced a simplification, a deterministic processing
+time, to the classical KPR processes and obtained analytical understanding of
+how the whole process preserves information from input to output. While KPR has
+been applied to many different biological processes including replication and
+signaling, we highlight the differences in the biological context. Consequently,
+the performance metrics for KPR are different in different scenarios, which
+resolved the conflicts in results from Zilman's work and previous understanding
+of speed-accuracy tradeoff in KPR. Our simplification to KPR allows for a
+generalized form of KPR with higher accuracy and speed, in which both the
+activation (processing) time and unbinding time are near deterministic.
+
+Since the beginning of last century, (nonequilibrium) statistical physics has
+developed independently a set of tools to deal with stochastic (Langevin)
+processes, while the math community adopted a different set of tools for
+stochastic calculus. There can be some fruitful consequences of introducing
+existing mathematical tools, in particular, the Ito formula, to the field of
+stochastic thermodynamics. For example, as Manzano et al. showed in their 
+[work](https://doi.org/10.1103/PhysRevLett.126.080603), the work theorem can be
+derived from the martingale perspective. Their proof is still based on the 
+language of Crook's fluctuation theorem and path integrals. However, the use 
+of inverse paths may endanger the requirement of adaptivity in the martingale
+with respect to the filtration, let alone the path integral formulation is 
+not well established in mathematics. We provide an alternative [proof]({{ site.baseurl }}/blog/Work-theorem-martingale.html) to the 
+martingale property without the use of fluctuation theorem/stochastic entropy
+production/path integral formulation.
+
 I also develop tools to facilitate research itself, such as [citation
 crawler](https://github.com/hsianktin/paper_network_builder), a [tool]({{ site.baseurl }}/blog/citation-crawler.html) 
 to build [interactive](assets/citation_crawler.html) network of papers based on citation information.
@@ -41,7 +70,7 @@ Equations](/blog/a-note-on-lange.html) for more details.
 
 During my undergraduate years, I worked with Prof. [Zhi Qi (齐
 志)](https://cqb.pku.edu.cn/qizhi/) on the single-molecule biophysics
-topics. I worked as both a theorist and an experimentalist, and
+topics. I worked both as a theorist and an experimentalist, and
 developed a strong interest in the stochastic processes that occur in
 biological systems. 
 

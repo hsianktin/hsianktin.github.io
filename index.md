@@ -32,15 +32,15 @@ developed independently a set of tools to deal with stochastic (Langevin)
 processes, while the math community adopted a different set of tools for
 stochastic calculus. There can be some fruitful consequences of introducing
 existing mathematical tools, in particular, the Ito formula, to the field of
-stochastic thermodynamics. For example, as Manzano et al. showed in their 
+stochastic thermodynamics. For example, as Manzano et al. showed in their
 [work](https://doi.org/10.1103/PhysRevLett.126.080603), the work theorem can be
-derived from the martingale perspective. Their proof is still based on the 
-language of Crook's fluctuation theorem and path integrals. However, the use 
-of inverse paths may endanger the requirement of adaptivity in the martingale
-with respect to the filtration, let alone the path integral formulation is 
-not well established in mathematics. We provide an alternative [proof]({{ site.baseurl }}/blog/Work-theorem-martingale.html) to the 
-martingale property without the use of fluctuation theorem/stochastic entropy
-production/path integral formulation.
+derived from the martingale perspective. Their proof is still based on the
+language of Crook's fluctuation theorem and path integrals. However, the use of
+inverse paths may endanger the requirement of adaptivity in the martingale with
+respect to the filtration, let alone the path integral formulation is not well
+established in mathematics. We provide an alternative [proof]({{ site.baseurl
+}}/blog/work-theorem-martingale.html) to the martingale property without the use
+of fluctuation theorem/stochastic entropy production/path integral formulation.
 
 I also develop tools to facilitate research itself, such as [citation
 crawler](https://github.com/hsianktin/paper_network_builder), a [tool]({{ site.baseurl }}/blog/citation-crawler.html) 
@@ -55,18 +55,20 @@ statistical physics, mathematics, and computational techniques, all
 aimed at elucidating the deterministic and stochastic dynamics that
 dictate molecular interactions from a semi-analytical perspective.
 
-I received my B.S. in the Integrated Science Program at Peking
-University. The program provided me with a broad and relatively
-in-depth exposure to mathematics (analysis, geometry, topology,
-dynamical systems, and probability), physics (statistical mechanics),
-physical chemistry, and biology (molecular, developmental, and
-evolutionary biology). Beyond the training in the classroom, I managed
-to appreciate different research fields from perspectives of a
-mathematician, a physicist, and a biologist. Even for the same problem
-of Brownian motion and Langevin equation, the physical approach and
-the mathematical approach are quite different in the formalism, see my
-blog post [A note on Langevin Equations and Stochastic Differential
-Equations](/blog/a-note-on-lange.html) for more details.
+I received my B.S. in the Integrated Science Program at Peking University. The
+program provided me with a broad and relatively in-depth exposure to mathematics
+(analysis, geometry, topology, dynamical systems, and probability), physics
+(statistical mechanics), physical chemistry, and biology (molecular,
+developmental, and evolutionary biology). Beyond the training in the classroom,
+I managed to appreciate different research fields from perspectives of a
+mathematician, a physicist, and a biologist. Even for the same problem of
+Brownian motion and Langevin equation, the physical approach and the
+mathematical approach are quite different in the formalism, see my blog post [A
+note on Langevin Equations and Stochastic Differential
+Equations](/blog/a-note-on-lange.html) for more details. This perspective may
+have profound consequences on other aspects of stochastic thermodynamics,
+including the stochastic [work theorem]({{ site.baseurl
+}}/blog/work-theorem-martingale.html).
 
 During my undergraduate years, I worked with Prof. [Zhi Qi (齐
 志)](https://cqb.pku.edu.cn/qizhi/) on the single-molecule biophysics
@@ -89,7 +91,7 @@ approach.
 
 
 ### Recent Publications
-
+- Xia, M., **Li, X.**, Shen, Q., Chou, T. (2024). Learning unbounded-domain spatiotemporal differential equations using adaptive spectral methods, _Journal of Applied Mathematics and Computing_, (2024). [DOI:10.1007/s12190-024-02131-2](http://dx.doi.org/10.1007/s12190-024-02131-2).
 - **Li, X.**, Chou, T. (2023). Stochastic nucleosome disassembly mediated by remodelers and histone fragmentation,  _Journal of Chemical Physics_, (2023). [DOI:10.1063/5.0165136](https://doi.org/10.1063/5.0165136).
 - **Li, X.**, Habibipour, S., Chou, T., Yang, O. O. (2023). The role of APOBEC3-induced mutations in the differential evolution of monkeypox virus, _Virus Evolution_, [doi:10.1093/ve/vead058](https://doi.org/10.1093/ve/vead058).
 - Ding, J.\*, **Li, X.**\*, Shen, J., Zhao, Y., Zhong S., Lai, L., Niu H., Qi, Z. (2023). ssDNA accessibility of Rad51 is regulated by orchestrating multiple RPA dynamics, _Nature Communications_, [doi:10.1038/s41467-023-39579-y](https://doi.org/10.1038/s41467-023-39579-y).

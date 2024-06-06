@@ -18,10 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Stochastic Biophysics Research by Xiangting Li
+title: Xiangting Li
 email: xiangting.li@ucla.edu
 description: >-
-  Xiangting Li delves into the stochastic dynamics inherent in biological systems, focusing particularly on DNA-protein interactions across multiple scales. By amalgamating statistical physics, biomathematics, and computational methodologies, Li aims to decode the complex molecular interactions within cellular environments. Explore the intricate dance of molecules through the lens of stochastic processes, and venture into the realms of biophysics and genomic maintenance.
+  Xiangting Li delves into the stochastic dynamics inherent in biological
+  systems, focusing particularly on DNA-protein interactions across multiple
+  scales. By amalgamating statistical physics, biomathematics, and computational
+  methodologies, Li aims to decode the complex molecular interactions within
+  cellular environments. Explore the intricate dance of molecules through the
+  lens of stochastic processes, and venture into the realms of biophysics and
+  genomic maintenance.
   #baseurl: "/research" # the subpath of your site, e.g. /blog
 url: "http://hsianktin.github.io" # 
 github_username:  hsianktin

@@ -81,6 +81,7 @@ Blog: /blog
 
 # Add general links to site pages here
 links:
+  Research: /research
   Publications: /publications
   Resume: /assets/resume.pdf
   

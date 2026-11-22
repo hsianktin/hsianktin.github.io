@@ -1,5 +1,5 @@
 /* Homepage interactions: theme toggle, mobile nav, header state,
-   scroll reveal, reading progress, and the Brownian-particle hero. */
+   scroll reveal, reading progress, and the fluctuating-curves hero plot. */
 (function () {
   "use strict";
 
@@ -81,21 +81,31 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---- Hero: overdamped Brownian particles ----------------------------
-     Each particle follows an Ornstein–Uhlenbeck step toward its home point,
-       x ← x + θ (x₀ − x) Δt + σ √Δt ξ,   ξ ~ N(0, 1),
-     and nearby particles are joined by faint bonds. */
+  /* ---- Hero: a family of fluctuating curves ----------------------------
+     On the unit square (u → right, v → down) curve k is
+       v_k(u, t) = v₀ + k·Δv − A_k(t)·exp(−(u − μ(t) − k·δ)² / 2s²) − β·u,
+     where each amplitude A_k follows an Ornstein–Uhlenbeck process
+       A ← A + θ (Ā − A) Δt + σ √Δt ξ,   ξ ~ N(0, 1),
+     and the crest position μ(t) drifts slowly. A crosshair tracks the crest
+     of the middle curve. */
   var canvas = document.querySelector(".hero-canvas");
   if (!canvas || !canvas.getContext) return;
 
   var ctx = canvas.getContext("2d");
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var W = 0, H = 0, particles = [], running = false, visible = true, raf = 0;
-  var theta = 0.6, sigma = 26, dt = 1 / 60, bond = 92;
+  var W = 0, H = 0, running = false, visible = true, raf = 0, t = 0;
+  var N = 11, v0 = 0.64, dv = 0.04, delta = -0.012, s = 0.16, beta = 0.12;
+  var Abar = 0.3, theta = 0.8, sigma = 0.06, dt = 1 / 60;
+  var A = [];
+  for (var k = 0; k < N; k++) A.push(Abar);
 
   function gauss() {
-    var u = 1 - Math.random(), v = Math.random();
-    return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+    var a = 1 - Math.random(), b = Math.random();
+    return Math.sqrt(-2 * Math.log(a)) * Math.cos(2 * Math.PI * b);
+  }
+
+  function cssVar(name, fallback) {
+    return getComputedStyle(root).getPropertyValue(name).trim() || fallback;
   }
 
   function resize() {
@@ -104,46 +114,47 @@
     canvas.width = Math.round(W * dpr);
     canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var n = Math.round(Math.min(64, Math.max(22, (W * H) / 9000)));
-    particles = [];
-    for (var i = 0; i < n; i++) {
-      var hx = W * (0.35 + 0.65 * Math.random());
-      var hy = H * Math.random();
-      particles.push({ x: hx, y: hy, hx: hx, hy: hy, r: 1.2 + Math.random() * 2.2 });
-    }
   }
 
-  function rgb() {
-    return getComputedStyle(root).getPropertyValue("--particle").trim() || "47, 84, 200";
+  function mu() { return 0.6 + 0.07 * Math.sin(0.35 * t); }
+
+  function curveV(k, u, m) {
+    var c = k - (N - 1) / 2, x = u - m - c * delta;
+    return v0 + c * dv - A[k] * Math.exp(-(x * x) / (2 * s * s)) - beta * u;
   }
 
   function draw(step) {
-    var c = rgb(), i, j, p, q, dx, dy, d2, b2 = bond * bond, sq = Math.sqrt(dt);
-    ctx.clearRect(0, 0, W, H);
+    var i, k, u, m, sq = Math.sqrt(dt), steps = 90;
     if (step) {
-      for (i = 0; i < particles.length; i++) {
-        p = particles[i];
-        p.x += theta * (p.hx - p.x) * dt + sigma * sq * gauss();
-        p.y += theta * (p.hy - p.y) * dt + sigma * sq * gauss();
+      t += dt;
+      for (k = 0; k < N; k++) A[k] += theta * (Abar - A[k]) * dt + sigma * sq * gauss();
+    }
+    m = mu();
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 1.1;
+    ctx.strokeStyle = cssVar("--plot", "#6f9488");
+    for (k = 0; k < N; k++) {
+      ctx.beginPath();
+      for (i = 0; i <= steps; i++) {
+        u = i / steps;
+        var y = curveV(k, u, m) * H;
+        if (i === 0) ctx.moveTo(u * W, y); else ctx.lineTo(u * W, y);
       }
+      ctx.stroke();
     }
-    ctx.lineWidth = 1;
-    for (i = 0; i < particles.length; i++) {
-      p = particles[i];
-      for (j = i + 1; j < particles.length; j++) {
-        q = particles[j];
-        dx = p.x - q.x; dy = p.y - q.y; d2 = dx * dx + dy * dy;
-        if (d2 < b2) {
-          ctx.strokeStyle = "rgba(" + c + "," + (0.22 * (1 - d2 / b2)).toFixed(3) + ")";
-          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
-        }
-      }
-    }
-    ctx.fillStyle = "rgba(" + c + ",0.55)";
-    for (i = 0; i < particles.length; i++) {
-      p = particles[i];
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI); ctx.fill();
-    }
+    var mid = (N - 1) / 2, cx = m * W, cy = curveV(mid, m, m) * H;
+    var copper = cssVar("--accent-2", "#b8693d");
+    ctx.strokeStyle = copper;
+    ctx.fillStyle = copper;
+    ctx.lineWidth = 1.2;
+    ctx.beginPath(); ctx.arc(cx, cy, 9, 0, 2 * Math.PI); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(cx - 17, cy); ctx.lineTo(cx - 5, cy);
+    ctx.moveTo(cx + 5, cy); ctx.lineTo(cx + 17, cy);
+    ctx.moveTo(cx, cy - 17); ctx.lineTo(cx, cy - 5);
+    ctx.moveTo(cx, cy + 5); ctx.lineTo(cx, cy + 17);
+    ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy, 2.6, 0, 2 * Math.PI); ctx.fill();
   }
 
   function loop() {
@@ -161,7 +172,6 @@
 
   resize();
   draw(false);
-  canvas.classList.add("is-ready");
   start();
 
   var resizeTimer;

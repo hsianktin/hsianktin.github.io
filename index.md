@@ -3,21 +3,35 @@ layout: default
 title: Home
 ---
 
-<section class="hero" aria-labelledby="hero-name">
-  <canvas class="hero-canvas" aria-hidden="true"></canvas>
-  <div class="hero-text">
-    <p class="eyebrow">Biomathematics · UCLA</p>
-    <h1 id="hero-name">Xiangting Li</h1>
-    <p class="hero-lede">Stochastic processes in biological systems: how DNA and proteins interact across scales, and what nonequilibrium processes do for the cell.</p>
-    <p class="hero-actions">
-      <a class="btn btn-primary" href="{{ site.baseurl }}/research">Research</a>
-      <a class="btn" href="{{ site.baseurl }}/publications">Publications</a>
-      <a class="btn" href="{{ site.baseurl }}/assets/resume.pdf" target="_blank" rel="noopener">CV</a>
-      <a class="btn btn-ghost" href="https://github.com/{{ site.github_username }}" rel="noopener">GitHub</a>
-    </p>
-    <ul class="chips" aria-label="Topics">
-      <li>DNA–protein interactions</li><li>Kinetic proofreading</li><li>Stochastic thermodynamics</li><li>Martingales &amp; Itô calculus</li>
-    </ul>
+<section class="hero-wrap" aria-labelledby="hero-name">
+  <div class="hero">
+    <div class="hero-bar" aria-hidden="true">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="coords">dX<sub>t</sub> = μ dt + σ dB<sub>t</sub></span>
+    </div>
+    <div class="hero-main">
+      <div class="hero-text">
+        <span class="hero-rule" aria-hidden="true"></span>
+        <p class="eyebrow">Biomathematics · UCLA</p>
+        <h1 id="hero-name">Xiangting Li</h1>
+        <p class="hero-lede">Stochastic processes in biological systems: how DNA and proteins interact across scales, and what nonequilibrium processes do for the cell.</p>
+        <p class="hero-actions">
+          <a class="btn btn-primary" href="{{ site.baseurl }}/research">Research</a>
+          <a class="btn" href="{{ site.baseurl }}/publications">Publications</a>
+          <a class="btn" href="{{ site.baseurl }}/assets/resume.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="btn" href="https://github.com/{{ site.github_username }}" rel="noopener">GitHub</a>
+        </p>
+      </div>
+      <figure class="hero-plot">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <figcaption>sample paths · t →</figcaption>
+      </figure>
+    </div>
+    <nav class="hero-strip" aria-label="Highlights">
+      <a href="{{ site.baseurl }}/research"><strong>Research</strong><span>DNA–protein interactions, kinetic proofreading, stochastic thermodynamics</span></a>
+      <a href="{{ site.baseurl }}/publications"><strong>Publications</strong><span>Nature Communications, Biophysical Journal, J. Chem. Phys., Virus Evolution</span></a>
+      <a href="{{ site.baseurl }}/blog"><strong>Notes</strong><span>Langevin equations, first-passage times, martingales and the work theorem</span></a>
+    </nav>
   </div>
 </section>
 

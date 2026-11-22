@@ -18,7 +18,7 @@ title: Home
         <p class="hero-actions">
           <a class="btn btn-primary" href="{{ site.baseurl }}/research">Research</a>
           <a class="btn" href="{{ site.baseurl }}/publications">Publications</a>
-          <a class="btn" href="{{ site.baseurl }}/assets/resume.pdf" target="_blank" rel="noopener">CV (2024)</a>
+          <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
           <a class="btn" href="https://github.com/{{ site.github_username }}" rel="noopener">GitHub</a>
         </p>
       </div>

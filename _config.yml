@@ -88,6 +88,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - jekyllBear.gemspec
+  - assets/resume.pdf
 
 Blog: /blog
 
@@ -97,7 +98,7 @@ links:
   Publications: /publications
   Teaching: /teaching
   Blog: /blog
-  CV (2024): /assets/resume.pdf
+  CV: /cv/
   
 
 # Add links for more focus here

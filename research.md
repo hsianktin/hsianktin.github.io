@@ -40,8 +40,9 @@ The second part of my work is the interest to understand the nonequilibrium
 nature of life systems from a functional perspective. It is well known that
 living forms utilize external energy to drive the molecular processes out of
 equilibrium. However, the function and mechanism of nonequilibrium processes for
-living forms are not very clear. In a recent work we submitted to PLoS CB, we
-revisit a well-known nonequilibrium process in cells, the kinetic proofreading.
+living forms are not very clear. In our [PLOS Computational Biology
+paper](https://doi.org/10.1371/journal.pcbi.1012183), we revisit kinetic
+proofreading, a well-known nonequilibrium process in cells.
 Our observation is that the energy consuming steps of KPR allows a
 non-exponential waiting time to activation. This non-exponential waiting time
 carries memory of the history, enabling an enhanced sensitivity to the binding

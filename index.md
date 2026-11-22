@@ -57,18 +57,6 @@ how well intrinsic bond properties discriminate ligands.
 </div>
 
 <div class="feature" markdown="1">
-<p class="feature-label">Kinetic proofreading</p>
-<div markdown="1">
-Kinetic proofreading spends energy so that cells can tell similar ligands
-apart. In [_PLOS Computational Biology_ (2024)](https://doi.org/10.1371/journal.pcbi.1012183)
-we compare first-passage-time and product-counting strategies in stochastic
-multistep proofreading. The energy-consuming steps make the waiting time to
-activation non-exponential, and this points to a generalized scheme that is
-both faster and more accurate than classical proofreading.
-</div>
-</div>
-
-<div class="feature" markdown="1">
 <p class="feature-label">Stochastic thermodynamics</p>
 <div markdown="1">
 I use martingale methods and Itô calculus to derive fluctuation results
@@ -76,30 +64,6 @@ without path integrals. In [_Journal of Statistical Physics_ (2025)](https://doi
 we prove a generalized work theorem in which the forward and backward
 processes are decoupled, and a [2026 preprint](https://arxiv.org/abs/2601.12854)
 extends it to stopped stochastic chemical reaction networks.
-</div>
-</div>
-
-<div class="feature" markdown="1">
-<p class="feature-label">Learning stochastic dynamics</p>
-<div markdown="1">
-With Mingtao Xia and Tom Chou, I develop Wasserstein-distance losses for
-learning stochastic differential equations and jump-diffusion processes from
-data ([_Machine Learning_ 2025](https://doi.org/10.1007/s10994-025-06908-9);
-[_MLST_ 2024](https://doi.org/10.1088/2632-2153/ad9379)), and apply neural
-SDEs driven by extrinsic noise to reconstruct gene-regulation dynamics
-([_PLOS Computational Biology_ 2025](https://doi.org/10.1371/journal.pcbi.1013462)).
-</div>
-</div>
-
-<div class="feature" markdown="1">
-<p class="feature-label">DNA–protein interactions</p>
-<div markdown="1">
-Earlier work models how proteins share and compete for DNA and RNA: how
-multiple RPA dynamics regulate Rad51 access to single-stranded DNA
-([_Nature Communications_ 2023](https://doi.org/10.1038/s41467-023-39579-y)),
-how remodelers disassemble nucleosomes ([_J. Chem. Phys._ 2023](https://doi.org/10.1063/5.0165136)),
-and how ribosomes and RNA polymerase interact in transcription–translation
-coupling ([_Biophysical Journal_ 2023](https://doi.org/10.1016/j.bpj.2022.09.041)).
 </div>
 </div>
 

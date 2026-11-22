@@ -4,22 +4,28 @@ layout: compress
 
 {% include head.html %}
 
-<main>
-
     {% include header.html %}
 
-    
-    <h1>{{ page.title }}</h1>
-    <i>{{ page.date | date: "%b %d, %Y" }}</i>
-    <h4 class="subtitle">{{ page.subtitle }}</h4>
+    <main id="content" class="container">
 
-    {{ page.content }}
+        <article class="post">
+            <header class="post-header">
+                <p class="post-meta">
+                    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+                    {% for tag in page.tags %}<a class="tag" href="{{ site.baseurl }}/tagged/{{ tag }}/">#{{ tag }}</a>{% endfor %}
+                </p>
+                <h1 class="page-title">{{ page.title }}</h1>
+                {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+            </header>
 
+            <div class="post-body">
+                {{ content }}
+            </div>
+        </article>
 
+        {% include footer-post.html %}
 
-</main>
-
-{% include footer-post.html %}
+    </main>
 
 </body>
 

@@ -1,16 +1,17 @@
 ---
-layout: default
+layout: page
 title: Research
 ---
 
-### Research Interests
+<p class="lead" markdown="1">
 My research integrates principles of statistical physics, stochastic processes,
 and biological insights to elucidate complex molecular dynamics in living
 systems. The focus is on distilling complex interactions into understandable
 models that predict biological behaviors under both equilibrium and
 nonequilibrium conditions.
+</p>
 
-#### DNA-Protein Interactions and Dynamics
+## DNA-Protein Interactions and Dynamics
 The first part of my study focuses on a mechanistic understanding of peculiar
 biological phenomena, in particular, modeling of multiple protein-DNA
 interactions.
@@ -34,7 +35,7 @@ transport, such as the transcription and translation processes. I also studied h
 transcription-translation coupling in prokaryotes, a specific interaction, interacts 
 with volume exclusion to alter the fluxes of RNA polymerase and ribosomes.
 
-#### Nonequilibrium Molecular Processes
+## Nonequilibrium Molecular Processes
 The second part of my work is the interest to understand the nonequilibrium
 nature of life systems from a functional perspective. It is well known that
 living forms utilize external energy to drive the molecular processes out of
@@ -48,7 +49,7 @@ affinity between the substrate and ligand. This perspective also allows us to
 identify a generalized form of kinetic proofreading that could be both more
 accurate and faster compared to the traditional proofreading scheme.
 
-#### Stochastic Thermodynamics
+## Stochastic Thermodynamics
 While it is well-known that statistical physics is established on statistical or
 probabilistic methods, it has diverged from the modern probability theory. A
 most heated topic between mathematicians and physicists is the definition of
@@ -62,4 +63,4 @@ can be proved using tools from the theory of stochastic processes, or It\^o calc
 with no reference to the path integral. In addition, a mathematical path integral 
 method can be developed more rigorously to justify the Crooks fluctuation theorem, 
 which highlights the asymmetry between forward and backward processes that 
-is absent in the classical or ``physical'' path integral approach.
+is absent in the classical or “physical” path integral approach.

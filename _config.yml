@@ -72,10 +72,17 @@ timezone: America/Los_Angeles
 future: false
 
 exclude:
-- README.md
-- LICENSE.md
-
-exclude: [vendor]
+  - README.md
+  - LICENSE.md
+  - LICENSE.txt
+  - CLAUDE.md
+  - vendor
+  - _td
+  - "*.edtz"
+  - "~1"
+  - Gemfile
+  - Gemfile.lock
+  - jekyllBear.gemspec
 
 Blog: /blog
 
@@ -83,7 +90,8 @@ Blog: /blog
 links:
   Research: /research
   Publications: /publications
-  Resume: /assets/resume.pdf
+  Blog: /blog
+  CV: /assets/resume.pdf
   
 
 # Add links for more focus here

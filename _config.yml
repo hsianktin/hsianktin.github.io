@@ -21,9 +21,9 @@
 title: Stochastic Fluctuations
 author: Xiangting Li
 # Colour palette: slate, forest, navy, ocean, plum or graphite (see _data/palettes.yml).
-palette: slate
+palette: graphite
 # Show palette swatches in the footer so visitors can try the others.
-palette_picker: true
+palette_picker: false
 email: xiangting.li@ucla.edu
 description: >-
   Xiangting Li delves into the stochastic dynamics inherent in biological

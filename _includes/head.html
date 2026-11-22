@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-palette="{{ site.palette | default: 'slate' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,8 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description | strip_newlines }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0f1216" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121416" media="(prefers-color-scheme: dark)">
     <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="{{ site.baseurl }}/assets/icon.svg" type="image/svg+xml">
     <link href='{{ site.baseurl }}/feed.xml' rel='alternate' type='application/atom+xml'>

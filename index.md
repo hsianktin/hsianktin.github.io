@@ -22,11 +22,6 @@ title: Home
         <canvas class="hero-canvas" aria-hidden="true"></canvas>
       </figure>
     </div>
-    <nav class="hero-strip" aria-label="Highlights">
-      <a href="{{ site.baseurl }}/research"><strong>Research</strong><span>DNA–protein interactions, kinetic proofreading, stochastic thermodynamics</span></a>
-      <a href="{{ site.baseurl }}/publications"><strong>Publications</strong><span>Newton, Journal of Statistical Physics, PLOS Computational Biology</span></a>
-      <a href="{{ site.baseurl }}/blog"><strong>Notes</strong><span>Langevin equations, first-passage times, martingales and the work theorem</span></a>
-    </nav>
   </div>
 </section>
 

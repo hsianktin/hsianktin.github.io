@@ -1,5 +1,5 @@
 /* Homepage interactions: theme toggle, mobile nav, header state,
-   scroll reveal, reading progress, and the fluctuating-curves hero plot. */
+   scroll reveal, reading progress, palette picker, and the sample-path hero plot. */
 (function () {
   "use strict";
 
@@ -26,6 +26,25 @@
       syncLabel();
     });
   }
+
+  /* ---- Palette picker ------------------------------------------------- */
+  var swatches = document.querySelectorAll(".palette-picker button");
+  function syncSwatches() {
+    var cur = root.getAttribute("data-palette");
+    swatches.forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-palette") === cur ? "true" : "false");
+    });
+  }
+  swatches.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var key = b.getAttribute("data-palette");
+      root.setAttribute("data-palette", key);
+      try { localStorage.setItem("palette", key); } catch (e) { /* storage blocked */ }
+      syncSwatches();
+      document.dispatchEvent(new Event("palettechange"));
+    });
+  });
+  syncSwatches();
 
   /* ---- Mobile navigation ---------------------------------------------- */
   var navBtn = document.querySelector(".nav-toggle");
@@ -81,27 +100,37 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---- Hero: a family of fluctuating curves ----------------------------
-     On the unit square (u → right, v → down) curve k is
-       v_k(u, t) = v₀ + k·Δv − A_k(t)·exp(−(u − μ(t) − k·δ)² / 2s²) − β·u,
-     where each amplitude A_k follows an Ornstein–Uhlenbeck process
-       A ← A + θ (Ā − A) Δt + σ √Δt ξ,   ξ ~ N(0, 1),
-     and the crest position μ(t) drifts slowly. A crosshair tracks the crest
-     of the middle curve. */
+  /* ---- Hero: a family of stochastic sample paths ----------------------
+     On the unit square (u → right, v → down) path k is a smooth mean plus
+     a rough noise path,
+       v_k(u) = v₀ + k·Δv − A·exp(−(u − μ − k·δ)² / 2s²) − β·u + η_k(u),
+     where η_k is an Ornstein–Uhlenbeck process in u,
+       η_{i+1} = η_i − θ η_i Δu + σ √Δu ξ_i,   ξ_i ~ N(0, 1).
+     New samples enter on the right and the paths scroll left, so the
+     picture is a live trace. A crosshair marks path k = mid at u = μ. */
   var canvas = document.querySelector(".hero-canvas");
   if (!canvas || !canvas.getContext) return;
 
   var ctx = canvas.getContext("2d");
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var W = 0, H = 0, running = false, visible = true, raf = 0, t = 0;
-  var N = 11, v0 = 0.64, dv = 0.04, delta = -0.012, s = 0.16, beta = 0.12;
-  var Abar = 0.3, theta = 0.8, sigma = 0.06, dt = 1 / 60;
-  var A = [];
-  for (var k = 0; k < N; k++) A.push(Abar);
+  var W = 0, H = 0, running = false, visible = true, raf = 0, frame = 0;
+  var N = 11, v0 = 0.64, dv = 0.04, delta = -0.012, s = 0.16, beta = 0.12, A = 0.3, mu = 0.6;
+  var M = 220, du = 1 / (M - 1), theta = 6, sigma = 0.085;
+  var eta = [];
 
   function gauss() {
     var a = 1 - Math.random(), b = Math.random();
     return Math.sqrt(-2 * Math.log(a)) * Math.cos(2 * Math.PI * b);
+  }
+
+  function ouStep(x) {
+    return x - theta * x * du + sigma * Math.sqrt(du) * gauss();
+  }
+
+  for (var k = 0; k < N; k++) {
+    var path = [sigma / Math.sqrt(2 * theta) * gauss()];
+    for (var i = 1; i < M; i++) path.push(ouStep(path[i - 1]));
+    eta.push(path);
   }
 
   function cssVar(name, fallback) {
@@ -116,33 +145,37 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  function mu() { return 0.6 + 0.07 * Math.sin(0.35 * t); }
+  function meanV(k, u) {
+    var c = k - (N - 1) / 2, x = u - mu - c * delta;
+    return v0 + c * dv - A * Math.exp(-(x * x) / (2 * s * s)) - beta * u;
+  }
 
-  function curveV(k, u, m) {
-    var c = k - (N - 1) / 2, x = u - m - c * delta;
-    return v0 + c * dv - A[k] * Math.exp(-(x * x) / (2 * s * s)) - beta * u;
+  function advance() {
+    for (var k = 0; k < N; k++) {
+      var p = eta[k];
+      p.shift();
+      p.push(ouStep(p[p.length - 1]));
+    }
   }
 
   function draw(step) {
-    var i, k, u, m, sq = Math.sqrt(dt), steps = 90;
-    if (step) {
-      t += dt;
-      for (k = 0; k < N; k++) A[k] += theta * (Abar - A[k]) * dt + sigma * sq * gauss();
-    }
-    m = mu();
+    var i, k, u;
+    if (step && (frame++ % 2 === 0)) advance();
     ctx.clearRect(0, 0, W, H);
-    ctx.lineWidth = 1.1;
+    ctx.lineWidth = 1;
+    ctx.lineJoin = "round";
     ctx.strokeStyle = cssVar("--plot", "#6f9488");
     for (k = 0; k < N; k++) {
       ctx.beginPath();
-      for (i = 0; i <= steps; i++) {
-        u = i / steps;
-        var y = curveV(k, u, m) * H;
-        if (i === 0) ctx.moveTo(u * W, y); else ctx.lineTo(u * W, y);
+      for (i = 0; i < M; i++) {
+        u = i * du;
+        var y = (meanV(k, u) + eta[k][i]) * H;
+        if (i === 0) ctx.moveTo(0, y); else ctx.lineTo(u * W, y);
       }
       ctx.stroke();
     }
-    var mid = (N - 1) / 2, cx = m * W, cy = curveV(mid, m, m) * H;
+    var mid = (N - 1) / 2, im = Math.round(mu / du);
+    var cx = im * du * W, cy = (meanV(mid, im * du) + eta[mid][im]) * H;
     var copper = cssVar("--accent-2", "#b8693d");
     ctx.strokeStyle = copper;
     ctx.fillStyle = copper;
@@ -192,4 +225,5 @@
   }
 
   if (themeBtn) themeBtn.addEventListener("click", function () { if (!running) draw(false); });
+  document.addEventListener("palettechange", function () { if (!running) draw(false); });
 })();

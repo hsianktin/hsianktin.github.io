@@ -16,12 +16,13 @@
     <link href='{{ site.baseurl }}/feed.xml' rel='alternate' type='application/atom+xml'>
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
     <script>
-        (function () { try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); } } catch (e) { } document.documentElement.classList.add('js'); })();
+        (function () { var d = document.documentElement, p = '{{ site.palette | default: "slate" }}'; try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') { d.setAttribute('data-theme', t); } {% if site.palette_picker %}var s = localStorage.getItem('palette'); if (s) { p = s; } {% endif %}var q = /[?&]palette=([a-z]+)/.exec(location.search); if (q) { p = q[1]; } } catch (e) { } d.setAttribute('data-palette', p); d.classList.add('js'); })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/palettes.css">
     <script defer src="{{ site.baseurl }}/assets/site.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
         MathJax.Hub.Config({

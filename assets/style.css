@@ -926,6 +926,28 @@ ul.blog-posts a:visited { color: var(--visited); }
 .footer-links a { color: var(--muted); }
 .footer-links a:hover { color: var(--accent); }
 
+.palette-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.palette-picker span { margin-right: 0.2rem; }
+
+.palette-picker button {
+    width: 1.15rem;
+    height: 1.15rem;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: conic-gradient(var(--sw-a) 0 50%, var(--sw-b) 50% 75%, var(--sw-c) 75%);
+    cursor: pointer;
+    transition: transform 0.2s var(--ease), box-shadow 0.2s;
+}
+
+.palette-picker button:hover { transform: scale(1.15); }
+.palette-picker button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--ink); }
+
 /* ---- Scroll reveal ----------------------------------------------------- */
 .js .reveal {
     opacity: 0;

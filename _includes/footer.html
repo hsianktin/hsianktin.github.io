@@ -1,6 +1,15 @@
 <footer class="site-footer">
     <div class="footer-inner">
         <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
+        {% if site.palette_picker %}
+        <div class="palette-picker" role="group" aria-label="Colour palette">
+            <span>Palette</span>
+            {% for p in site.data.palettes %}
+            <button type="button" data-palette="{{ p.key }}" title="{{ p.name }}" aria-label="{{ p.name }}"
+                style="--sw-a: {{ p.light.accent }}; --sw-b: {{ p.light.accent-2 }}; --sw-c: {{ p.light.bg }};"></button>
+            {% endfor %}
+        </div>
+        {% endif %}
         <p class="footer-links">
             <a href="https://github.com/{{ site.github_username }}" rel="noopener">GitHub</a>
             <a href="{{ site.baseurl }}/assets/resume.pdf" target="_blank" rel="noopener">CV</a>

@@ -5,10 +5,6 @@ title: Home
 
 <section class="hero-wrap" aria-labelledby="hero-name">
   <div class="hero">
-    <div class="hero-bar" aria-hidden="true">
-      <span class="dots"><i></i><i></i><i></i></span>
-      <span class="coords">dX<sub>t</sub> = μ dt + σ dB<sub>t</sub></span>
-    </div>
     <div class="hero-main">
       <div class="hero-text">
         <span class="hero-rule" aria-hidden="true"></span>
@@ -24,7 +20,6 @@ title: Home
       </div>
       <figure class="hero-plot">
         <canvas class="hero-canvas" aria-hidden="true"></canvas>
-        <figcaption>sample paths · t →</figcaption>
       </figure>
     </div>
     <nav class="hero-strip" aria-label="Highlights">

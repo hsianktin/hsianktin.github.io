@@ -420,30 +420,6 @@ body:not(.layout-post) .read-progress { display: none; }
     overflow: hidden;
 }
 
-.hero-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 1.2rem;
-    border-bottom: 1px solid var(--line);
-}
-
-.hero-bar .dots { display: flex; gap: 0.4rem; }
-.hero-bar .dots i {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--plot);
-    opacity: 0.8;
-}
-
-.hero-bar .coords {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--muted);
-    letter-spacing: 0.04em;
-}
-
 .hero-main {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
@@ -543,13 +519,11 @@ body:not(.layout-post) .read-progress { display: none; }
     height: 100%;
 }
 
-.hero-plot figcaption {
-    position: absolute;
-    left: 0.6rem;
-    bottom: 0.45rem;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--muted);
+.js .hero-canvas { animation: draw-in 1.6s 0.35s cubic-bezier(0.33, 1, 0.68, 1) both; }
+
+@keyframes draw-in {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
 }
 
 /* Strip of three linked summaries under the hero */
@@ -951,8 +925,8 @@ ul.blog-posts a:visited { color: var(--visited); }
 /* ---- Scroll reveal ----------------------------------------------------- */
 .js .reveal {
     opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    transform: translateY(16px);
+    transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
 }
 
 .js .reveal.is-visible {
@@ -960,12 +934,54 @@ ul.blog-posts a:visited { color: var(--visited); }
     transform: none;
 }
 
+/* ---- Page transitions -------------------------------------------------- */
+/* Cross-document view transitions (Chromium 126+, Safari 18.2+): the header
+   stays put while the page body cross-fades and slides. Other browsers just
+   navigate normally and still get the entrance animation below. */
+@view-transition { navigation: auto; }
+
+.site-header { view-transition-name: site-header; }
+.site-footer { view-transition-name: site-footer; }
+
+::view-transition-old(root) { animation: vt-out 0.22s var(--ease) both; }
+::view-transition-new(root) { animation: vt-in 0.38s var(--ease) both; }
+
+@keyframes vt-out { to { opacity: 0; transform: translateY(-8px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(10px); } }
+
+/* Theme switch: a circle grows from the toggle button */
+.theme-vt::view-transition-old(root),
+.theme-vt::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+.theme-vt::view-transition-new(root) { animation: vt-circle 0.55s var(--ease) both; }
+
+@keyframes vt-circle {
+    from { clip-path: circle(0 at var(--vt-x, 100%) var(--vt-y, 0)); }
+    to { clip-path: circle(150vmax at var(--vt-x, 100%) var(--vt-y, 0)); }
+}
+
+/* Entrance: page titles and post headers rise in on load */
+.js .page-title,
+.js .post-meta,
+.js .lead,
+.js .post-header .subtitle {
+    animation: rise 0.7s var(--ease) both;
+}
+.js .post-meta { animation-delay: 0s; }
+.js .page-title { animation-delay: 0.05s; }
+.js .lead, .js .post-header .subtitle { animation-delay: 0.12s; }
+
+/* Underline that slides in under the active nav item */
+.site-nav a[aria-current="page"]::after { animation: nav-underline 0.5s var(--ease) both; transform-origin: left; }
+@keyframes nav-underline { from { transform: scaleX(0); } }
+
 /* ---- Legacy helpers kept from the previous theme ------------------------ */
 .image-gallery { overflow: auto; }
 
 /* ---- Reduced motion ---------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    @view-transition { navigation: none; }
+    ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 
     *,
     *::before,
@@ -976,6 +992,9 @@ ul.blog-posts a:visited { color: var(--visited); }
     }
 
     .js .reveal,
+    .js .page-title,
+    .js .post-meta,
+    .js .lead,
     .js .hero-text > *,
     .js .hero-plot,
     .js .hero-strip {

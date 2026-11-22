@@ -239,19 +239,25 @@ th { font-family: var(--font-sans); font-weight: 600; color: var(--ink); }
 }
 
 .brand-mark {
-    display: inline-grid;
-    place-items: center;
+    display: block;
     width: 2rem;
     height: 2rem;
-    border-radius: 9px;
-    font-size: 0.78rem;
-    letter-spacing: 0.02em;
-    color: #fff;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    flex: none;
     transition: transform 0.4s var(--ease);
 }
 
-.brand:hover .brand-mark { transform: rotate(-8deg) scale(1.06); }
+.brand-trace {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+}
+
+.brand:hover .brand-mark { transform: rotate(-6deg) scale(1.06); }
+.brand:hover .brand-trace { animation: trace 0.9s var(--ease); }
+
+@keyframes trace {
+    from { stroke-dashoffset: 1; }
+    to { stroke-dashoffset: 0; }
+}
 
 .site-nav {
     display: flex;

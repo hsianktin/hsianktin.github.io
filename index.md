@@ -12,13 +12,13 @@ title: Home
     <div class="hero-main">
       <div class="hero-text">
         <span class="hero-rule" aria-hidden="true"></span>
-        <p class="eyebrow">Biomathematics · UCLA</p>
+        <p class="eyebrow">Biomathematics · Southwest University</p>
         <h1 id="hero-name">Xiangting Li</h1>
         <p class="hero-lede">Stochastic processes in biological systems: how DNA and proteins interact across scales, and what nonequilibrium processes do for the cell.</p>
         <p class="hero-actions">
           <a class="btn btn-primary" href="{{ site.baseurl }}/research">Research</a>
           <a class="btn" href="{{ site.baseurl }}/publications">Publications</a>
-          <a class="btn" href="{{ site.baseurl }}/assets/resume.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="btn" href="{{ site.baseurl }}/assets/resume.pdf" target="_blank" rel="noopener">CV (2024)</a>
           <a class="btn" href="https://github.com/{{ site.github_username }}" rel="noopener">GitHub</a>
         </p>
       </div>
@@ -29,7 +29,7 @@ title: Home
     </div>
     <nav class="hero-strip" aria-label="Highlights">
       <a href="{{ site.baseurl }}/research"><strong>Research</strong><span>DNA–protein interactions, kinetic proofreading, stochastic thermodynamics</span></a>
-      <a href="{{ site.baseurl }}/publications"><strong>Publications</strong><span>Nature Communications, Biophysical Journal, J. Chem. Phys., Virus Evolution</span></a>
+      <a href="{{ site.baseurl }}/publications"><strong>Publications</strong><span>Newton, Journal of Statistical Physics, PLOS Computational Biology</span></a>
       <a href="{{ site.baseurl }}/blog"><strong>Notes</strong><span>Langevin equations, first-passage times, martingales and the work theorem</span></a>
     </nav>
   </div>
@@ -39,25 +39,26 @@ title: Home
 
 ## Welcome
 
-Hello! My name is Xiangting Li and I am currently pursuing my Ph.D. in
-biomathematics at UCLA, advised by Prof. [Tom
-Chou](https://www.math.ucla.edu/~tchou/index.html). My research
-focuses on understanding the stochastic processes that occur in
-biological systems, particularly diving into how DNA and proteins
-interact across different scales.
+I'm Xiangting Li, a lecturer in the School of Mathematics and Statistics at
+Southwest University. I received my Ph.D. in Biomathematics from UCLA in 2025,
+where I was advised by [Tom Chou](https://www.math.ucla.edu/~tchou/index.html).
+My research focuses on stochastic processes in biological systems, especially
+how molecular interactions and nonequilibrium dynamics shape cellular behavior.
+My dissertation is [*Stochastic Dynamics and Thermodynamics of Molecular
+Interactions in the Cell*](https://escholarship.org/uc/item/7f05d5mw).
 
 </section>
 
 <section class="section reveal" markdown="1">
 
-## Current work
+## Research highlights
 
 <div class="feature" markdown="1">
 <p class="feature-label">Kinetic proofreading</p>
 <div markdown="1">
 A recent interest of mine, inspired by the work of Anton Zilman, is to
 understand and evaluating nonequilibrium processes by its functions. In our
-[paper](https://arxiv.org/abs/2402.04547) on the stochastic kinetic proofreading
+[paper](https://doi.org/10.1371/journal.pcbi.1012183) on the stochastic kinetic proofreading
 (KPR) processes, we introduced a simplification, a deterministic processing
 time, to the classical KPR processes and obtained analytical understanding of
 how the whole process preserves information from input to output. While KPR has
@@ -113,7 +114,8 @@ statistical physics, mathematics, and computational techniques, all
 aimed at elucidating the deterministic and stochastic dynamics that
 dictate molecular interactions from a semi-analytical perspective.
 
-I received my B.S. in the Integrated Science Program at Peking University. The
+I received my M.S. in Biomathematics from UCLA in 2023 and my B.S. through the
+Integrated Science Program at Peking University in 2020. The undergraduate
 program provided me with a broad and relatively in-depth exposure to mathematics
 (analysis, geometry, topology, dynamical systems, and probability), physics
 (statistical mechanics), physical chemistry, and biology (molecular,
@@ -134,7 +136,7 @@ topics. I worked both as a theorist and an experimentalist, and
 developed a strong interest in the stochastic processes that occur in
 biological systems. 
 
-At UCLA, my work is focused on characterizing the stochastic dynamics
+At UCLA, my doctoral work focused on characterizing the stochastic dynamics
 of DNA-protein interactions. The goal is to create a link between the
 microscopic interactions occurring at the molecular level and the
 macroscopic phenomena observed in biology. In pursuit of this goal, I
@@ -153,14 +155,13 @@ approach.
 
 ## Recent publications
 
-- Xia, M., **Li, X.**, Shen, Q., Chou, T. (2024). Learning unbounded-domain spatiotemporal differential equations using adaptive spectral methods, _Journal of Applied Mathematics and Computing_, (2024). [DOI:10.1007/s12190-024-02131-2](http://dx.doi.org/10.1007/s12190-024-02131-2).
-- **Li, X.**, Chou, T. (2023). Stochastic nucleosome disassembly mediated by remodelers and histone fragmentation,  _Journal of Chemical Physics_, (2023). [DOI:10.1063/5.0165136](https://doi.org/10.1063/5.0165136).
-- **Li, X.**, Habibipour, S., Chou, T., Yang, O. O. (2023). The role of APOBEC3-induced mutations in the differential evolution of monkeypox virus, _Virus Evolution_, [doi:10.1093/ve/vead058](https://doi.org/10.1093/ve/vead058).
-- Ding, J.\*, **Li, X.**\*, Shen, J., Zhao, Y., Zhong S., Lai, L., Niu H., Qi, Z. (2023). ssDNA accessibility of Rad51 is regulated by orchestrating multiple RPA dynamics, _Nature Communications_, [doi:10.1038/s41467-023-39579-y](https://doi.org/10.1038/s41467-023-39579-y).
-- **Li, X.**, Chou, T. (2023). Stochastic dynamics and ribosome-RNAP interactions in transcription-translation coupling, _Biophysical Journal_, [doi:10.1016/j.bpj.2022.09.041](https://doi.org/10.1016/j.bpj.2022.09.041).
+- **Li, X.** and Wang, S. (2026). [Extrinsic catch bonds may limit intrinsic ligand discrimination](https://doi.org/10.1016/j.newton.2026.100463). _Newton_.
+- **Li, X.** and Chou, T. (2025). [Martingale Properties of Entropy Production and a Generalized Work Theorem with Decoupled Forward and Backward Processes](https://doi.org/10.1007/s10955-025-03530-w). _Journal of Statistical Physics_.
+- Xia, M., **Li, X.**, Shen, Q., and Chou, T. (2025). [Squared Wasserstein-2 loss functions for efficient learning of stochastic differential equations](https://doi.org/10.1007/s10994-025-06908-9). _Machine Learning_.
+- Zhang, J., **Li, X.**, Guo, X., You, Z., Böttcher, L., Mogilner, A., Hoffmann, A., Chou, T., and Xia, M. (2025). [Reconstructing noisy gene regulation dynamics using extrinsic-noise-driven neural stochastic differential equations](https://doi.org/10.1371/journal.pcbi.1013462). _PLOS Computational Biology_.
 {: .pub-list}
 
-<p class="note">* Denotes co-first authorship. <a href="{{ site.baseurl }}/publications">Full list →</a></p>
+<p class="note"><a href="{{ site.baseurl }}/publications">Full list →</a></p>
 
 </section>
 

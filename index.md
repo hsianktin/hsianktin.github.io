@@ -44,50 +44,62 @@ Interactions in the Cell*](https://escholarship.org/uc/item/7f05d5mw).
 ## Research highlights
 
 <div class="feature" markdown="1">
+<p class="feature-label">Mechanics of immune recognition</p>
+<div markdown="1">
+T-cell receptors can form catch bonds, which last longer when pulled. In
+[_Newton_ (2026)](https://doi.org/10.1016/j.newton.2026.100463) we show that
+catch behavior can also arise extrinsically, from the geometry of the
+membrane interface: a receptor–ligand complex compressed in a narrow gap is
+stabilized by a small force. Because this effect depends on gap size, bond
+stiffness and receptor mobility rather than on the bond itself, it may limit
+how well intrinsic bond properties discriminate ligands.
+</div>
+</div>
+
+<div class="feature" markdown="1">
 <p class="feature-label">Kinetic proofreading</p>
 <div markdown="1">
-A recent interest of mine, inspired by the work of Anton Zilman, is to
-understand and evaluating nonequilibrium processes by its functions. In our
-[paper](https://doi.org/10.1371/journal.pcbi.1012183) on the stochastic kinetic proofreading
-(KPR) processes, we introduced a simplification, a deterministic processing
-time, to the classical KPR processes and obtained analytical understanding of
-how the whole process preserves information from input to output. While KPR has
-been applied to many different biological processes including replication and
-signaling, we highlight the differences in the biological context. Consequently,
-the performance metrics for KPR are different in different scenarios, which
-resolved the conflicts in results from Zilman's work and previous understanding
-of speed-accuracy tradeoff in KPR. Our simplification to KPR allows for a
-generalized form of KPR with higher accuracy and speed, in which both the
-activation (processing) time and unbinding time are near deterministic.
+Kinetic proofreading spends energy so that cells can tell similar ligands
+apart. In [_PLOS Computational Biology_ (2024)](https://doi.org/10.1371/journal.pcbi.1012183)
+we compare first-passage-time and product-counting strategies in stochastic
+multistep proofreading. The energy-consuming steps make the waiting time to
+activation non-exponential, and this points to a generalized scheme that is
+both faster and more accurate than classical proofreading.
 </div>
 </div>
 
 <div class="feature" markdown="1">
 <p class="feature-label">Stochastic thermodynamics</p>
 <div markdown="1">
-Since the beginning of last century, (nonequilibrium) statistical physics has
-developed independently a set of tools to deal with stochastic (Langevin)
-processes, while the math community adopted a different set of tools for
-stochastic calculus. There can be some fruitful consequences of introducing
-existing mathematical tools, in particular, the Ito formula, to the field of
-stochastic thermodynamics. For example, as Manzano et al. showed in their
-[work](https://doi.org/10.1103/PhysRevLett.126.080603), the work theorem can be
-derived from the martingale perspective. Their proof is still based on the
-language of Crook's fluctuation theorem and path integrals. However, the use of
-inverse paths may endanger the requirement of adaptivity in the martingale with
-respect to the filtration, let alone the path integral formulation is not well
-established in mathematics. We provide an alternative [proof]({{ site.baseurl
-}}/blog/work-theorem-martingale.html) to the martingale property without the use
-of fluctuation theorem/stochastic entropy production/path integral formulation.
+I use martingale methods and Itô calculus to derive fluctuation results
+without path integrals. In [_Journal of Statistical Physics_ (2025)](https://doi.org/10.1007/s10955-025-03530-w)
+we prove a generalized work theorem in which the forward and backward
+processes are decoupled, and a [2026 preprint](https://arxiv.org/abs/2601.12854)
+extends it to stopped stochastic chemical reaction networks.
 </div>
 </div>
 
 <div class="feature" markdown="1">
-<p class="feature-label">Research tools</p>
+<p class="feature-label">Learning stochastic dynamics</p>
 <div markdown="1">
-I also develop tools to facilitate research itself, such as [citation
-crawler](https://github.com/hsianktin/paper_network_builder), a [tool]({{ site.baseurl }}/blog/citation-crawler.html) 
-to build [interactive](assets/citation_crawler.html) network of papers based on citation information.
+With Mingtao Xia and Tom Chou, I develop Wasserstein-distance losses for
+learning stochastic differential equations and jump-diffusion processes from
+data ([_Machine Learning_ 2025](https://doi.org/10.1007/s10994-025-06908-9);
+[_MLST_ 2024](https://doi.org/10.1088/2632-2153/ad9379)), and apply neural
+SDEs driven by extrinsic noise to reconstruct gene-regulation dynamics
+([_PLOS Computational Biology_ 2025](https://doi.org/10.1371/journal.pcbi.1013462)).
+</div>
+</div>
+
+<div class="feature" markdown="1">
+<p class="feature-label">DNA–protein interactions</p>
+<div markdown="1">
+Earlier work models how proteins share and compete for DNA and RNA: how
+multiple RPA dynamics regulate Rad51 access to single-stranded DNA
+([_Nature Communications_ 2023](https://doi.org/10.1038/s41467-023-39579-y)),
+how remodelers disassemble nucleosomes ([_J. Chem. Phys._ 2023](https://doi.org/10.1063/5.0165136)),
+and how ribosomes and RNA polymerase interact in transcription–translation
+coupling ([_Biophysical Journal_ 2023](https://doi.org/10.1016/j.bpj.2022.09.041)).
 </div>
 </div>
 

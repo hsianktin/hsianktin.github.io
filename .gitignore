@@ -3,4 +3,17 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-.edtz
+
+# Editor state and backup files
+*.edtz
+*~
+~*
+
+# Internal records: td board, agent runtime files. Never publish.
+/_td/
+/.multica/
+/.agent_context/
+/.claude/
+/CLAUDE.md
+/AGENTS.md
+/TODO.md

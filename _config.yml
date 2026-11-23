@@ -84,8 +84,6 @@ exclude:
   - vendor
   - _td
   - "*.edtz"
-  - "~"
-  - "~1"
   - Gemfile
   - Gemfile.lock
   - jekyllBear.gemspec

@@ -135,6 +135,8 @@ approach.
 
 ## Recent talks
 
+- APS Global Physics Summit 2025 (MAR-J70.6), A generalization of the martingale property of entropy production in stochastic systems, Anaheim, California, March 18, 2025.
+- APS Global Physics Summit 2025 (MAR-G72.2), Specificity, sensitivity, and energy dissipation in kinetic proofreading: a mechanistic revisit, Anaheim, California, March 18, 2025.
 - APS March Meetings 2024, Stochastic nucleosome disassembly mediated by remodelers and histone fragmentation,  Minneapolis, Minnesota, March 7, 2024.
 - Joint Mathematics Meetings 2024, The role of APOBEC3-induced mutations in the differential evolution of monkeypox virus, San Francisco, California, January 3, 2024.
 - Soft Condensed Matter Seminar, Buffer structure and robust perfect adaptation, UCLA, Los Angeles, California, November 16, 2023.

@@ -205,7 +205,7 @@
     accent-2: "#d9532b"
     plot: "#8a96a3"
     plot-bg: "#f0f0ec"
-    band: "#1e2124"
+    band: "#474d54"
     grid: "rgba(30, 33, 36, 0.08)"
     band-grid: "rgba(241, 236, 218, 0.06)"
     accent-soft: "rgba(31, 95, 191, 0.1)"
